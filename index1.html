@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasa Nobre | Hamburgueria</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121214;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #1a1a1e;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ea580c;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.botao {
+    background: #ea580c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.menu {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(90deg, #121214 25%, #121214aa),
+    center/cover;
+}
+
+.hero div {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ea580c;
+}
+
+.hero p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.titulo span {
+    color: #ea580c;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #1a1a1e;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.preco {
+    color: #f59e0b;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.localizacao {
+    background: #1a1a1e;
+    text-align: center;
+    line-height: 2;
+}
+
+.localizacao h2 {
+    margin-bottom: 20px;
+}
+
+.localizacao span {
+    color: #f59e0b;
+}
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    color: #aaa;
+}
+
+footer strong {
+    color: #ea580c;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 45px 7%;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .galeria img {
+        height: 140px;
+    }
+
+    .titulo {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔥 BRASA NOBRE</div>
+
+    <button class="menu" onclick="abrirMenu()">☰</button>
+
+    <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Localização</a>
+    </nav>
+
+    <a class="botao" href="https://wa.me/">Peça agora</a>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+    <div>
+        <h1>O verdadeiro sabor do <span>fogo!</span></h1>
+        <p>
+            Hambúrgueres artesanais, carnes defumadas
+            e ingredientes selecionados.
+            Uma experiência feita para quem ama sabor.
+        </p>
+        <a href="#cardapio" class="botao">Conheça nosso cardápio</a>
+    </div>
+</section>
+
+<section id="cardapio">
+    <h2 class="titulo">Nossos <span>hambúrgueres</span></h2>
+
+    <div class="produtos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Smash Bacon">
+            <div class="card-info">
+                <h3>Smash Bacon</h3>
+                <p>Carne smash, queijo cheddar, bacon crocante e molho especial.</p>
+                <div class="preco">R$ 38,00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600" alt="Truffle Gorgon">
+            <div class="card-info">
+                <h3>Truffle Gorgon</h3>
+                <p>Hambúrguer artesanal, queijo gorgonzola e toque de trufas.</p>
+                <div class="preco">R$ 44,00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551615593-ef5fe247e8f7?w=600" alt="Smokehouse">
+            <div class="card-info">
+                <h3>Smokehouse</h3>
+                <p>Carne defumada, queijo, cebola caramelizada e molho barbecue.</p>
+                <div class="preco">R$ 42,00</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="galeria">
+    <h2 class="titulo">Nossa <span>galeria</span></h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600" alt="Hambúrguer artesanal">
+        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600" alt="Hambúrguer com queijo">
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600" alt="Hambúrguer preparado">
+        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=600" alt="Hambúrguer artesanal na mesa">
+    </div>
+</section>
+
+<section class="localizacao" id="localizacao">
+    <h2>Venha conhecer a <span>Brasa Nobre!</span></h2>
+
+    <p>📍 Endereço: Rua Hildo Pinto, 406 - Sagrado Coração</p>
+    <p>🕒 Terça a Domingo: 18h às 23h</p>
+    <p>📦 Retirada e delivery disponíveis</p>
+</section>
+
+</main>
+
+<script>
+function abrirMenu() {
+    document.getElementById("nav").classList.toggle("ativo");
+}
+</script>
+
+</body>
+</html>
